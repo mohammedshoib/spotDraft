@@ -1,0 +1,32 @@
+<section class="container">
+  <header class="header">
+    <section class="author-details">
+      <div>Shoib Mohammed Alimuddin | +91-9916330551</div>
+      <div><a href="https://www.linkedin.com/in/shoib-mohammed-a-a79a4912/" target="_blank">LinkedIn</a></div>
+    </section>
+    <!-- planets search -->
+    <input class="search-field" type="text" name="search" placeholder="Search your favourite planet! ex - Alderaan"  (keyup)="searchPlanets($event)" [(ngModel)]="SEARCHED_PLANETS" />
+    <!-- favourites -->
+    <button class="favourites-button favourites-button-{{IS_SHOWING_SAVED_PLANETS}}" name="favourites-planets" (click)="showSavedList()">
+      Saved Planets <span *ngIf="SAVED_PLANETS_LENGTH">({{SAVED_PLANETS_LENGTH}})</span>
+    </button>
+  </header>
+  <!-- center column -->
+  <section class="data-container">
+    <!-- Planets -->
+    <section class="parent-virtual-scroll no-planets-{{((IS_SHOWING_SAVED_PLANETS && SAVED_PLANETS_LENGTH === 0) ? true : false)}}">
+      <virtual-scroller #scroll [items]="PLANETS" class="planets-container" [scrollAnimationTime]="3000">
+        <ng-container *ngFor="let planet of scroll.viewPortItems; trackBy:identify;">
+          <app-planet [planet]="planet" (savePlanetEvent)="handleSavePlanet($event)"></app-planet>
+        </ng-container>
+      </virtual-scroller>
+    </section>
+    <p class="planets-footer">
+      Showing <span>{{ PLANETS.length }} </span> out of 
+      <span>{{ TOTAL_PLANETS }}</span> planets.
+    </p>
+  </section>
+  <footer class="footer"><!-- footer --></footer>
+</section>
+<!-- sounds -->
+<audio src="../assets/click.wav" #clickSound preload="auto" style="display: none;"></audio>

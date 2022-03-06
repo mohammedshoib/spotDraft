@@ -1,0 +1,106 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border-right: 2px solid #988c13;
+    border-left: 2px solid #988c13;
+    background: url('/assets/stars.png');
+    box-sizing: border-box;
+    .header {
+        height: 60px;
+        width: 100%;
+        background: #988c13;
+        position: relative;
+        .search-field, .favourites-button {
+            width: 500px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            padding: 0 0 0 20px;
+            border: none;
+            font-size: 16px;
+            border: 1px solid rgba(0,0,0,0.883);
+            border-left: 4px solid rgba(0, 0, 0, 0.883);
+            border-right: 4px solid rgba(0, 0, 0, 0.883);
+        }
+
+        .favourites-button {
+            width: 180px;
+            height: 40px;
+            left: unset;
+            right: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .favourites-button-true {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        .author-details {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    .data-container {
+        width: 50%;
+        min-width: 500px;
+        height: calc(100vh - 66px);
+        overflow: hidden;
+        border: none;
+        // border-left: 1px solid #988c13;
+        // border-right: 1px solid #988c13;
+        margin: auto;
+        position: relative;
+
+        .planets-footer {
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            right: 0;
+            font-size: 14px;
+            color: #fff;
+            padding-left: 6px;
+            span {
+                font-weight: bold;
+                color: #988c13;
+            }
+        }
+
+        .parent-virtual-scroll {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: calc(100vh - 100px);  
+            padding-bottom: 100px;
+            .planets-container {
+                height: calc(100vh - 100px);
+                width: 100%;
+                overflow-x: hidden;
+            }
+        }
+
+        .no-planets-true {
+            background: url('../assets/no-planets.png') no-repeat center center / 300px;
+        }
+
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #988c13;
+        height: 6px;
+    }
+}

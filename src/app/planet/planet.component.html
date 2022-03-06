@@ -1,0 +1,11 @@
+<section class="planet">
+   <div class="image">
+        <img src="../assets/planet.png" alt="{{planet?.name}}" />
+   </div>
+   <div class="details">
+       <h3>{{planet?.name}}</h3>
+       <p class="films">Total films - {{planet?.films?.length}}</p>
+       <p class="date">{{planet?.created | date:'short'}}</p>
+    </div>
+    <button class="save-btn" (click)="savePlanet(planet)">{{(planet.saved ? 'Unsave' : 'Save')}}</button>
+</section>

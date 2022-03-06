@@ -1,0 +1,58 @@
+.planet {
+    color: #fff;
+    width: calc(100% - 40px);
+    height: 100px;
+    overflow: hidden;
+    border-bottom: 1px solid #988c13;
+    margin: 10px 0;
+    padding: 0 20px;
+    position: relative;
+
+    .image {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+
+        img {
+            width: 75px;
+        }
+    }
+
+    .details {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+
+        .films {
+            text-decoration: underline;
+            color: #988c13;
+            cursor: pointer;
+        }
+
+        .date {
+            margin-top: 24px;
+        }
+    }
+    .save-btn {
+        background-color: #988c13;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        width: 60px;
+        height: 30px;
+        border-radius: 16px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        border: none;
+        display: none;
+    }
+    .save-btn:hover {
+        background-color: #585104;
+    }
+}
+
+.planet:hover .save-btn{
+    display: block;
+}
