@@ -4,7 +4,7 @@
   "author": "Shoib Mohammed Alimuddin | +91-9916330551",
   "license": "3rd round assignment for spotDraft",
   "scripts": {
-    "ng": "ng generate component planet",
+    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
